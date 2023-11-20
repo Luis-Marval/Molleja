@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="Datos" action="Var_Ciclica.php" method="post">
+        <label for="Time">Numero de Trimestres</label>
+        <input placeholder="Trimestres" type="number" name="Time" id="Time"><br><br>
+        <script>
+            var Ven=document.getElementById("Time");
+            function Num(){            
+                var elemento=document.getElementById("Datos");
+                var insert = elemento.children[4];
+                for(var i=0;i<Ven.value;i++){
+                    insert.insertAdjacentHTML('beforebegin','<label for="Num'+i+'">Ventas del Trimestre '+(i+1)+': </label><input placeholder="Ventas Trimestrales" type="number" name="Num'+i+'" id="Num'+i+'"><br><br>');
+                };
+            }
+            Ven.addEventListener('keyup',Num)
+        </script>
+        <label for="Desire">Numero de ventas deseadas</label>
+        <input placeholder="Ventas" type="number" name="Desire" id="Desire">
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

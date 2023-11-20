@@ -1,0 +1,11 @@
+*{font-size: 1.2em;}
+td{
+    outline: 1px solid black;
+}td.title{
+    background-color:#1ed4f0;
+}td[colspan="8"]{
+    text-align: center;
+}
+table{
+    border: 5px solid black;
+}
